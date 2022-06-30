@@ -38,6 +38,12 @@ namespace WebAPIDemo
             services.AddScoped<IProductRepositoy, ProductRepositoy>();
             services.AddScoped<IProductServices, ProductServices>();
 
+            services.AddScoped<IEmployeeRepository, EmployeeRepositoy>();
+            services.AddScoped<IEmployeeServices, EmployeeServices>();
+
+   /*         services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped<ICourseServices, CourseServices>();*/
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIDemo", Version = "v1" });
@@ -54,6 +60,8 @@ namespace WebAPIDemo
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPIDemo v1"));
             }
 
             app.UseRouting();

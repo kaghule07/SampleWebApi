@@ -6,8 +6,8 @@ namespace WebAPIDemo.Repositories
 {
     public class CourseRepository:ICourseRepository
     {
-        RepositoriesContext2 context;
-        public CourseRepository(RepositoriesContext2 context) //DI
+        RepositoriesContext context;
+        public CourseRepository(RepositoriesContext context) //DI
         {
             this.context = context;
         }

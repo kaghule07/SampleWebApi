@@ -6,8 +6,8 @@ namespace WebAPIDemo.Repositories
 {
     public class EmployeeRepositoy:IEmployeeRepository
     {
-        RepositoriesContext1 context;
-        public EmployeeRepositoy(RepositoriesContext1 context) //DI
+        RepositoriesContext context;
+        public EmployeeRepositoy(RepositoriesContext context) //DI
         {
             this.context = context;
         }
