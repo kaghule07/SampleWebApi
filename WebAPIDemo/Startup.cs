@@ -33,13 +33,14 @@ namespace WebAPIDemo
 
             services.AddControllers();
             services.AddDbContextPool<RepositoriesContext>(options =>
-            options.UseSqlServer(Configuration.GetSection("SqlConnection:ConnectionString").Value));
-            
+            options.UseSqlServer(Configuration.GetSection("ConnectionStrings:DefaultConnection").Value));
+
             services.AddScoped<IProductRepositoy, ProductRepositoy>();
             services.AddScoped<IProductServices, ProductServices>();
+
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SampleWebApi", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIDemo", Version = "v1" });
             });
            
 

@@ -15,7 +15,7 @@ namespace WebAPIDemo.Controllers
             _prodservice = prodservice;
         }
         [HttpGet]
-        [Route("[action]")]
+        //[Route("[action]")]
         [Route("GetProducts")]
         public IActionResult GetProducts()
         {

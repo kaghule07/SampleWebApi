@@ -5,14 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 namespace WebAPIDemo.Entities
-
 {
-    public class RepositoriesContext : DbContext
+    public class RepositoriesContext1 : DbContext
     {
-        public RepositoriesContext(DbContextOptions options) : base(options) { }
+        public RepositoriesContext1(DbContextOptions options) : base(options) { }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
     }
-   
 }

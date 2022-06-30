@@ -6,15 +6,12 @@ using System.Linq;
 using System.Threading.Tasks;
 namespace WebAPIDemo.Model
 {
-    [Table("Product")]
-    public class Product
+    [Table("Course")]
+    public class Course
     {
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public decimal Price { get; set; }
+        public decimal Fees { get; set; }
     }
-
-
 }
-
