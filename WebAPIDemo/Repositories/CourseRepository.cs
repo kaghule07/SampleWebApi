@@ -7,7 +7,7 @@ namespace WebAPIDemo.Repositories
     public class CourseRepository:ICourseRepository
     {
         RepositoriesContext context;
-        public CourseRepository(RepositoriesContext context) //DI
+        public CourseRepository(RepositoriesContext context) 
         {
             this.context = context;
         }
@@ -15,7 +15,7 @@ namespace WebAPIDemo.Repositories
         public int AddCourse(Course cr)
         {
             context.Courses.Add(cr);
-            context.SaveChanges(); // update the data in DB
+            context.SaveChanges(); 
             return 1;
         }
 

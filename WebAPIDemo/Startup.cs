@@ -41,8 +41,8 @@ namespace WebAPIDemo
             services.AddScoped<IEmployeeRepository, EmployeeRepositoy>();
             services.AddScoped<IEmployeeServices, EmployeeServices>();
 
-   /*         services.AddScoped<ICourseRepository, CourseRepository>();
-            services.AddScoped<ICourseServices, CourseServices>();*/
+            services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped<ICourseServices, CourseServices>();
 
             services.AddSwaggerGen(c =>
             {

@@ -16,7 +16,7 @@ namespace WebAPIDemo.Controllers
             _empservice = empservice;   
         }
         [HttpGet]
-        [Route("[action]")]
+        //[Route("[action]")]
         [Route("GetEmployees")]
         public IActionResult GetEmployees()
         {
